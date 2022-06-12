@@ -27,7 +27,7 @@ docker run [-it] \
     --cap-add NET_ADMIN \
     -p <exposed-port>:3128 \
     -v /path/to/ovpn:/config.ovpn
-    hyperbola/proxy-over-vpn:v1
+    hyperbola/proxy-over-vpn:1
 ```
 
 - NGINX server acts as forward proxy server which exposes port on 3128, and therefore you need to set `-p <exposed-port>:3128` to forward the port.
