@@ -33,3 +33,7 @@ docker run [-it] \
 - NGINX server acts as forward proxy server which exposes port on 3128, and therefore you need to set `-p <exposed-port>:3128` to forward the port.
 - OpenVPN requires the `NET_ADMIN` capability to work so you need to set `--cap-add NET_ADMIN` flag.
 - OpenVPN client reads the config at /config.ovpn so you need to mount that file with `-v /path/to/ovpn:/config.ovpn`.
+
+## Logs
+
+By default, logs of nginx server are output to stdout and stderr. Mount to /var/log/nginx/access.log and /var/log/nginx/error.log to collect logs.
