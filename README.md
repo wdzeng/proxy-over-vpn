@@ -1,11 +1,18 @@
 # Proxy over VPN
 
+[![github](https://badgen.net/badge/icon/github?icon=github&label=&color=black)](https://github.com/wdzeng/proxy-over-vpn/)
+[![docker](https://badgen.net/badge/icon/docker?icon=docker&label=)](https://hub.docker.com/repository/docker/hyperbola/proxy-over-vpn)
+[![release](https://badgen.net/github/release/wdzeng/proxy-over-vpn?color=red)](https://github.com/wdzeng/proxy-over-vpn/releases/latest)
+
 ![MEME](res/meme.webp)
 
-Run forward proxy server over VPN with docker.
+Run HTTP forward proxy server over VPN in docker container.
 
 > **Warning**  
 > Since a root container is required, you should not use podman.
+
+> **Warning**  
+> This project aims at HTTP proxy only.
 
 This image contains [NGINX](https://www.nginx.com/) server with [ngx_http_proxy_connect_module module](https://github.com/chobits/ngx_http_proxy_connect_module) and [OpenVPN](https://openvpn.net/). User traffics first arrive the forward proxy server, which then forward them over the VPN to the world.
 
